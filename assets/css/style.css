@@ -1,0 +1,142 @@
+:root{
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --primary-color: #2c3e50;
+    --secondary-color: #fff;
+    --third-color: #ecf0f1;
+    --fourth-color: #3498db;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    background: var(--secondary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+h1{
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+footer{
+    text-align: center;
+    padding: 1rem 0;
+    background: var(--primary-color);
+    color: var(--bg-color);
+}
+
+footer a {
+    color: var(--third-color);
+}
+
+.gallery-wrapper{
+    max-width: 1200px;
+    width: 100%;
+}
+
+.gallery-container{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 3 / 2;
+    max-height: 800px;
+    margin-bottom: 1rem;
+}
+
+.gallery{
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+
+.gallery-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.gallery-controls{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.control-btn{
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    color: var(--text-color);
+    font-size: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.control-btn:hover{
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.thumbnails{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.thumbnail{
+    width: 100px;
+    height: 67px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.thumbnail.active{
+    border-color: var(--fourth-color);
+}
+
+@media (max-width: 768px){
+    .gallery-container{
+        aspect-ratio: 4 / 3;
+    }
+
+    .gallery-controls{
+        display: none;
+    }
+
+    .thumbnail{
+        width: 80px;
+        height: 60px;
+    }
+}
