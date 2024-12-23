@@ -1,0 +1,17 @@
+{
+    "pageTitle": "Photo Gallery",
+    "headerTitle": "Photo Gallery",
+    "prevButton": "&lt;",
+    "nextButton": "&gt;",
+    "firstPhotoAlt": "First photo",
+    "secondPhotoAlt": "Second photo",
+    "thirdPhotoAlt": "Third photo",
+    "fourthPhotoAlt": "Fourth photo",
+    "fifthPhotoAlt": "Fifth photo",
+    "sixthPhotoAlt": "Sixth photo",
+    "seventhPhotoAlt": "Seventh photo",
+    "eighthPhotoAlt": "Eighth photo",
+    "ninthPhotoAlt": "Ninth photo",
+    "tenthPhotoAlt": "Tenth photo",
+    "footerCopyright": "&copy; 2024 <a href=\"https://picsum.photos/\">Lorem Picsum</a>. All rights reserved."
+}

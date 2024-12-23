@@ -70,12 +70,30 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
     }
     updateGallery()
-
-    const userLanguage = navigator.language || navigator.userLanguage;
-    const currentPage = window.location.pathname.split('/').pop();
-
-    if (userLanguage.startsWith('en') && currentPage !== 'index-en.html'){
-        window.location.href = 'index-en.html';
-        return;
+    
+    async function translatePage(language){
+        try{
+            const response = await fetch(`assets/lang/${language}.json`);
+            if(!response.ok){
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            const translations = await response.json();
+            
+            document.querySelectorAll('[data-i18n-key]').forEach(element =>{
+                const key = element.getAttribute('data-i18n-key');
+                if(translations[key]){
+                    if(element.tagName === 'INPUT' || element.tagName === 'TEXTAREA'){
+                        element.placeholder = translations[key]
+                    } else {
+                        element.innerHTML = translations[key]
+                    }
+                }
+            });
+        } catch (e) {
+            console.error('Error loading translations', e)
+        }
     }
+    const userLanguage = navigator.language || navigator.userLanguage;
+    const language = userLanguage.startsWith('en') ? 'en' : 'pt';
+    translatePage(language);
 });
