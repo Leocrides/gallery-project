@@ -9,6 +9,7 @@ Internacionalização
 O código também inclui uma função para tradução da interface, permitindo a mudança dinâmica do idioma da página. Isso é realizado através do carregamento assíncrono de arquivos JSON contendo as traduções.  
 Considerações Técnicas  
 A implementação faz uso de técnicas modernas de desenvolvimento web, como:  
+
 . Uso de flexbox para layout flexível  
 . Transições CSS para animações suaves  
 . Event listeners para interatividade  
