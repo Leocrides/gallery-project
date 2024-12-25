@@ -26,7 +26,9 @@ Esta abordagem resulta em uma galeria de imagens robusta e versátil, capaz de p
 Structure and Style The HTML file establishes the basic structure of the page, including the image gallery and navigation controls1  
 
 . CSS complements this structure, defining the layout and visual style of the gallery2  
-. A responsive design approach is used, with CSS variables to facilitate maintenance and theme adaptation. Dynamic Functionality JavaScript is responsible for making the gallery interactive and dynamic3  
+. A responsive design approach is used, with CSS variables to facilitate maintenance and theme adaptation.  
+
+Dynamic Functionality JavaScript is responsible for making the gallery interactive and dynamic3  
 . It implements the following main functionalities: Image Navigation: Allows the user to advance or go back in the gallery using buttons or swipe gestures on mobile devices. Thumbnail Display: Creates and manages a thumbnail section, enabling quick  navigation between images. Visual Update: Synchronizes the main image display with the thumbnail selection, highlighting the active thumbnail. Responsiveness: Adapts the interface for different screen sizes, hiding certain elements on mobile devices to optimize space.  
 
 Internationalization  
