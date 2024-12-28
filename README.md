@@ -22,7 +22,7 @@ A implementação faz uso de técnicas modernas de desenvolvimento web, como:
 
 Esta abordagem resulta em uma galeria de imagens robusta e versátil, capaz de proporcionar uma experiência de usuário fluida em diversos dispositivos e idiomas.  
 
-##English:  
+# English:  
 Structure and Style The HTML file establishes the basic structure of the page, including the image gallery and navigation controls1  
 
 » CSS complements this structure, defining the layout and visual style of the gallery2  
